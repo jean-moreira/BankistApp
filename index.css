@@ -1,0 +1,159 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  /* height: 100vh; */
+  padding: 3rem;
+}
+/* login info section */
+
+.idList {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+.idList ul {
+  margin-right: 20%;
+}
+
+/* all input  */
+input {
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+input::placeholder {
+  text-align: center;
+}
+
+button {
+  /* background-color: #f3f3f3; */
+  padding: 4px 8px 4px 8px;
+  margin-left: 5px;
+  border-radius: 50%;
+  color: black;
+  overflow: hidden;
+  z-index: 1;
+}
+/* green effect when hovering the button */
+.btn {
+  position: relative;
+  transition: 1000ms all ease;
+}
+
+.btn::before {
+  content: "";
+  background: lightgreen;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
+  z-index: -1;
+  width: 0%;
+  height: 100%;
+  transition: all 0.6s ease;
+}
+.btn:hover::before {
+  width: 100%;
+}
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  transition: ease-in-out 500ms;
+  transition-delay: 125ms;
+  opacity: 0;
+  margin-bottom: 2rem;
+}
+
+.headerRightBalance h1 {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+}
+main {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  height: 60vh;
+  transition: ease-out 650ms;
+  transition-delay: 500ms;
+  opacity: 0;
+}
+
+/* left part of main */
+
+.movementsBox {
+  display: flex;
+  flex: 0.6;
+  overflow-x: scroll;
+}
+
+.movementRow {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 10px;
+  min-height: 0;
+  margin-bottom: 1rem;
+}
+.movementRow--Deposit--js {
+  background-color: rgba(76, 187, 124, 0.59);
+}
+.movementRow--Withdrawal--js {
+  background-color: rgba(253, 76, 76, 0.585);
+}
+.movementDate {
+  padding-left: 2rem;
+}
+.movementRowLeft {
+  display: flex;
+}
+.bottomLine {
+  display: flex;
+  flex-direction: row;
+}
+.in {
+  margin-right: 1rem;
+}
+/* right part of main */
+.transferLoanDeleteBox {
+  flex: 0.3;
+  align-self: center;
+}
+.transferLoanDeleteBox input {
+  width: 100px;
+}
+
+.transferBox,
+.loanBox,
+.deleteBox {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.transferBox {
+  background-color: rgb(255, 203, 3);
+}
+.loanBox {
+  background-color: rgb(76, 187, 125);
+}
+.deleteBox {
+  background-color: rgb(253, 76, 76);
+}

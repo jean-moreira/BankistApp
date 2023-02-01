@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bankist App</title>
+    <!-- <link rel="shortcut icon" type="image/png" href="/Elements/icon.png> -->
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <div class="infoVisiteur">
+    <p>
+      Pour vous connecter veuillez utiliser l'un des trois comptes suivants:
+    </p>
+    <div class="idList">
+      <ul>
+        <li>ID: jm</li>
+        <li>Pin: 1111</li>
+      </ul>
+      <ul>
+        <li>ID: rb</li>
+        <li>Pin:2222</li>
+      </ul>
+      <ul>
+        <li>ID: gm</li>
+        <li>Pin:3333</li>
+      </ul>
+    </div>
+  </div>
+  <body>
+    <nav>
+      <p class="welcome">Login to get started.</p>
+      <img class="laBanqueLogo" src="Elements/logo.png" />
+      <form class="login">
+        <input class="input loginId-input" placeholder="ID" type="text" />
+        <input
+          class="input loginPassword-input"
+          placeholder="Password"
+          type="text"
+        />
+        <button class="btnLogin btn">➡︎</button>
+      </form>
+    </nav>
+
+    <header>
+      <div class="headerLeft">
+        <p class="headerLeftBalance">Current Balance</p>
+        <p class="headerLeftDate"></p>
+      </div>
+
+      <div class="headerRight">
+        <h1 class="headerRightBalance"></h1>
+        <div class="bottomLine">
+          <p class="in">In: <span class="inSpan"></span>€</p>
+          <p class="out">Out: <span class="outSpan"></span>€</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- movement area -->
+      <div class="movementsBox">
+        <div class="movementRow">
+          <div class="movementRowLeft">
+            <div class="movementType"></div>
+            <div class="movementDate"></div>
+          </div>
+          <div class="movementValue"></div>
+        </div>
+      </div>
+
+      <!-- Transfer, loan and delete area  -->
+      <div class="transferLoanDeleteBox">
+        <!-- Transfer -->
+        <div class="transferBox">
+          <h2>Transfer Money</h2>
+          <form class="transferForm">
+            <input
+              type="text"
+              class="transferInputDestinataire input"
+              placeholder="Transfer to "
+            />
+            <input
+              type="text"
+              class="transferInputAmount input"
+              placeholder="Amount "
+            />
+            <button class="btnTransfer btn">➡︎</button>
+          </form>
+        </div>
+
+        <!-- Loan -->
+        <div class="loanBox">
+          <h2>Request Loan</h2>
+          <form class="loanForm">
+            <input type="text" class="loanInput input" placeholder="Amount" />
+            <button class="btnLoan btn">➡︎</button>
+          </form>
+        </div>
+
+        <!-- Delete -->
+        <div class="deleteBox">
+          <h2>Close your account</h2>
+          <!-- <table></table> ???? -->
+          <form class="deleteForm">
+            <input
+              type="text"
+              class="deleteIdInput input"
+              placeholder="Re enter your id"
+            />
+            <input
+              type="text"
+              class="deletePassword input"
+              placeholder="Re enter password"
+            />
+
+            <button class="btnDelete btn">➡︎</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
